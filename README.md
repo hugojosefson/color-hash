@@ -129,7 +129,7 @@ npm test
 
 #### Coverage Report
 
-https://zenozeng.github.io/color-hash/coverage/lcov-report/lib/index.html
+https://hugojosefson.github.io/color-hash/coverage/lcov-report/lib/
 
 ### Build browser js
 
