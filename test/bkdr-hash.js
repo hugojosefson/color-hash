@@ -1,4 +1,4 @@
-var BKDRHash = require('../lib/bkdr-hash.js');
+var BKDRHash = require('../src/bkdr-hash');
 var assert = require('assert');
 
 describe('BKDRHash', function() {

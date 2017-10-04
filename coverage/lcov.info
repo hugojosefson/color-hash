@@ -1,5 +1,5 @@
 TN:
-SF:/surviving-data/code/color-hash/lib/bkdr-hash.js
+SF:/surviving-data/code/color-hash/src/bkdr-hash.js
 FN:7,(anonymous_1)
 FNF:1
 FNH:1
@@ -24,7 +24,7 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:/surviving-data/code/color-hash/lib/color-hash.js
+SF:/surviving-data/code/color-hash/src/index.js
 FN:9,(anonymous_1)
 FN:11,(anonymous_2)
 FN:29,(anonymous_3)

@@ -1,6 +1,6 @@
 var assert = require('assert');
 var rewire = require('rewire');
-var ColorHash = rewire('../lib/color-hash');
+var ColorHash = rewire('../src');
 var stringHash = require('string-hash');
 var HSL2RGB = ColorHash.__get__('HSL2RGB');
 var RGB2HEX = ColorHash.__get__('RGB2HEX');
