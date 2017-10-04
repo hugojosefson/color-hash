@@ -106,8 +106,8 @@ describe('ColorHash', function () {
         it('should return the hash color based on default lightness and saturation', function () {
             var colorHash = new ColorHash();
             var hsl = colorHash.hsl('');
-            hsl.shift();
-            assert.deepEqual(hsl, [0.35, 0.35]);
+            assert.ok([0.35, 0.5, 0.65].includes(hsl[1]));
+            assert.ok([0.35, 0.5, 0.65].includes(hsl[2]));
         });
 
         it('should return the hash color based on the given lightness and saturation', function () {
@@ -122,7 +122,8 @@ describe('ColorHash', function () {
                 saturation: [0.9, 1]
             });
             var hsl = colorHash.hsl('');
-            assert.deepEqual([hsl[1], hsl[2]], [0.9, 0.9]);
+            assert.ok([0.9, 1].includes(hsl[1]));
+            assert.ok([0.9, 1].includes(hsl[2]));
         });
     });
 

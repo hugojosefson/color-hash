@@ -1,31 +1,24 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.ColorHash = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/**
- * BKDR Hash (modified version)
- *
- * @param {String} str string to hash
- * @returns {Number}
- */
-var BKDRHash = function(str) {
-    var seed = 131;
-    var seed2 = 137;
-    var hash = 0;
-    // make hash more sensitive for short string like 'a', 'b', 'c'
-    str += 'x';
-    // Note: Number.MAX_SAFE_INTEGER equals 9007199254740991
-    var MAX_SAFE_INTEGER = parseInt(9007199254740991 / seed2);
-    for(var i = 0; i < str.length; i++) {
-        if(hash > MAX_SAFE_INTEGER) {
-            hash = parseInt(hash / seed2);
-        }
-        hash = hash * seed + str.charCodeAt(i);
-    }
-    return hash;
-};
+"use strict";
 
-module.exports = BKDRHash;
+function hash(str) {
+  var hash = 5381,
+      i    = str.length;
+
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+
+  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+   * integers. Since we want the results to be always positive, convert the
+   * signed int to an unsigned by doing an unsigned bitshift. */
+  return hash >>> 0;
+}
+
+module.exports = hash;
 
 },{}],2:[function(require,module,exports){
-var BKDRHash = require('./bkdr-hash');
+var stringHash = require('string-hash');
 
 /**
  * Convert RGB Array to HEX
@@ -115,7 +108,7 @@ var ColorHash = function(options) {
         };
     });
 
-    this.hash = options.hash || BKDRHash;
+    this.hash = options.hash || stringHash;
 };
 
 /**
@@ -169,5 +162,5 @@ ColorHash.prototype.hex = function(str) {
 
 module.exports = ColorHash;
 
-},{"./bkdr-hash":1}]},{},[2])(2)
+},{"string-hash":1}]},{},[2])(2)
 });

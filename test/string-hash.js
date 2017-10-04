@@ -1,9 +1,9 @@
-var BKDRHash = require('../src/bkdr-hash');
+var stringHash = require('string-hash');
 var assert = require('assert');
 
-describe('BKDRHash', function() {
+describe('string-hash', function() {
     it('should return different value for different string', function() {
-        assert.notEqual(BKDRHash('abc'), BKDRHash('hij'));
+        assert.notEqual(stringHash('abc'), stringHash('hij'));
     });
 
     it('should work even if the string is very long', function() {
@@ -11,7 +11,7 @@ describe('BKDRHash', function() {
         for(var i = 0; i < 10 * 1000; i++) {
             longstr += "Hello World.";
         };
-        var hash = BKDRHash(longstr);
+        var hash = stringHash(longstr);
         assert.notEqual(hash, Infinity);
         assert.notEqual(hash, 0);
     });
@@ -21,8 +21,8 @@ describe('BKDRHash', function() {
         for(var i = 0; i < 10 * 1000; i++) {
             longstr += "Hello World.";
         };
-        var hash1 = BKDRHash(longstr);
-        var hash2 = BKDRHash(longstr.substring(0, longstr.length - 1) + 'x');
+        var hash1 = stringHash(longstr);
+        var hash2 = stringHash(longstr.substring(0, longstr.length - 1) + 'x');
         assert.notEqual(hash1, hash2);
     });
 });

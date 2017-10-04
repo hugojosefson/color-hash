@@ -1,4 +1,4 @@
-var BKDRHash = require('./bkdr-hash');
+var stringHash = require('string-hash');
 
 /**
  * Convert RGB Array to HEX
@@ -88,7 +88,7 @@ var ColorHash = function(options) {
         };
     });
 
-    this.hash = options.hash || BKDRHash;
+    this.hash = options.hash || stringHash;
 };
 
 /**

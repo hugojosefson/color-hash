@@ -103,7 +103,7 @@ yarn test
 
 #### Coverage Report
 
-https://hugojosefson.github.io/color-hash/coverage/lcov-report/src/
+https://hugojosefson.github.io/color-hash/coverage/lcov-report/src/index.js.html
 
 ### Build standalone `dist/color-hash.js`
 
