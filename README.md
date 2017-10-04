@@ -16,7 +16,7 @@ https://hugojosefson.github.io/color-hash/demo/
 ## Install
 
 ```bash
-yarn add --dev @hugojosefson/color-hash
+yarn add @hugojosefson/color-hash
 
  # or
 
