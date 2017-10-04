@@ -6,6 +6,7 @@ Deterministically generate color based on a given string.
 [![npm page](https://img.shields.io/npm/v/@hugojosefson/color-hash.svg)](https://npmjs.com/package/@hugojosefson/color-hash)
 [![License MIT](https://img.shields.io/npm/l/@hugojosefson/color-hash.svg)](https://tldrlegal.com/license/mit-license)
 [![SemVer 2.0.0](https://img.shields.io/badge/SemVer-2.0.0-lightgrey.svg)](http://semver.org/spec/v2.0.0.html)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 _Based on [zenozeng/color-hash](https://github.com/zenozeng/color-hash); forked to restructure and future-proof._
 
@@ -103,11 +104,18 @@ yarn test
 
 #### Coverage Report
 
-https://hugojosefson.github.io/color-hash/coverage/lcov-report/src/index.js.html
+https://hugojosefson.github.io/color-hash/coverage/lcov-report/src/
 
 ### Build standalone `dist/color-hash.js`
 
 ```bash
 yarn
-yarn build
+yarn build:dist
+```
+
+### Build coverage report and demo
+
+```bash
+yarn
+yarn build:gh-pages
 ```

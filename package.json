@@ -9,8 +9,32 @@
   ],
   "scripts": {
     "prepare": "run-s build",
-    "build": "browserify src --standalone ColorHash --outfile dist/color-hash.js",
-    "test": "istanbul cover _mocha"
+    "build": "run-s build:dist",
+    "build:dist": "run-s clean:dist && mkdirp dist && browserify src --standalone ColorHash --outfile dist/color-hash.js",
+    "build:gh-pages": "run-s clean:gh-pages test build:dist build:gh-pages:demo build:gh-pages:dist",
+    "build:gh-pages:demo": "mkdirp gh-pages/demo && ncp demo gh-pages/demo/",
+    "build:gh-pages:dist": "mkdirp gh-pages/dist && ncp dist gh-pages/dist/",
+    "clean": "run-p clean:*",
+    "clean:dist": "rimraf dist",
+    "clean:gh-pages": "rimraf gh-pages",
+    "deploy:gh-pages": "gh-pages --dist gh-pages --repo git@github.com:hugojosefson/color-hash.git",
+    "test": "run-s lint mocha",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "mocha": "mkdirp gh-pages/coverage && istanbul cover --dir gh-pages/coverage _mocha",
+    "mocha-watch": "mocha --watch",
+    "precommit": "lint-staged",
+    "postpublish": "run-s build:gh-pages deploy:gh-pages"
+  },
+  "lint-staged": {
+    "*.{mjs,js,jsx}": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "comment-@std/esm.cjs": "Allow destructuring import from common-js modules.",
+  "@std/esm": {
+    "cjs": true
   },
   "repository": "hugojosefson/color-hash",
   "author": "Zeno Zeng",
@@ -19,11 +43,18 @@
     "url": "https://github.com/hugojosefson/color-hash/issues"
   },
   "devDependencies": {
+    "@std/esm": "^0.11.2",
     "browserify": "^14.4.0",
+    "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.5",
+    "lint-staged": "^4.2.3",
+    "mk-dir": "^1.0.1",
     "mocha": "^3.5.3",
+    "ncp": "^2.0.0",
     "npm-run-all": "^4.1.1",
-    "rewire": "^2.1.5"
+    "rewire": "^2.1.5",
+    "standard": "^10.0.3"
   },
   "dependencies": {
     "string-hash": "^1.1.3"
