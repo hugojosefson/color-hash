@@ -140,4 +140,4 @@ npm run build
 
 ### Follow Semantic Versioning
 
-http://semver.org/lang/zh-CN/
+http://semver.org/
