@@ -2,7 +2,6 @@
 var assert = require('assert')
 var rewire = require('rewire')
 var ColorHash = rewire('../src')
-var stringHash = require('string-hash')
 var HSL2RGB = ColorHash.__get__('HSL2RGB')
 var RGB2HEX = ColorHash.__get__('RGB2HEX')
 
@@ -15,7 +14,6 @@ function assertHueWithinRanges (options, ranges) {
   if (typeof ranges === 'undefined' || !ranges.length || !ranges[0]) {
     ranges = [{}]
   }
-  options.hash = stringHash // This hash function spreads its results more
 
   function hueOf (s) {
     var colorHash = new ColorHash(options)
