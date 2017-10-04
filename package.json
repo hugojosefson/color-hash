@@ -41,7 +41,7 @@
   "author": "Zeno Zeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hugojosefson/color-hash/issues"
+    "url": "https://waffle.io/hugojosefson/color-hash"
   },
   "devDependencies": {
     "@std/esm": "^0.11.2",
