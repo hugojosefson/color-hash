@@ -5,7 +5,7 @@ Deterministically generate color based on a given string.
 [![Build Status](https://travis-ci.org/hugojosefson/color-hash.svg?branch=master)](https://travis-ci.org/hugojosefson/color-hash)
 [![npm page](https://img.shields.io/npm/v/@hugojosefson/color-hash.svg)](https://npmjs.com/package/@hugojosefson/color-hash)
 [![License MIT](https://img.shields.io/npm/l/@hugojosefson/color-hash.svg)](https://tldrlegal.com/license/mit-license)
-[![SemVer 2.0.0](https://img.shields.io/badge/SemVer-2.0.0-lightgrey.svg)](http://semver.org/)
+[![SemVer 2.0.0](https://img.shields.io/badge/SemVer-2.0.0-lightgrey.svg)](http://semver.org/spec/v2.0.0.html)
 
 ## Demo
 
