@@ -7,6 +7,8 @@ Deterministically generate color based on a given string.
 [![License MIT](https://img.shields.io/npm/l/@hugojosefson/color-hash.svg)](https://tldrlegal.com/license/mit-license)
 [![SemVer 2.0.0](https://img.shields.io/badge/SemVer-2.0.0-lightgrey.svg)](http://semver.org/spec/v2.0.0.html)
 
+_Based on [zenozeng/color-hash](https://github.com/zenozeng/color-hash); forked to restructure and future-proof._
+
 ## Demo
 
 https://hugojosefson.github.io/color-hash/demo/
