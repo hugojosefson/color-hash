@@ -25,5 +25,8 @@
     "rewire": "^2.1.5",
     "string-hash": "^1.1.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=6"
+  }
 }
