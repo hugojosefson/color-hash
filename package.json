@@ -1,6 +1,6 @@
 {
   "name": "@hugojosefson/color-hash",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Generate color based on the given string (using HSL color space and string-hash).",
   "main": "src/index.js",
   "keywords": [
