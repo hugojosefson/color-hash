@@ -8,6 +8,10 @@ Deterministically generate color based on a given string.
 [![SemVer 2.0.0](https://img.shields.io/badge/SemVer-2.0.0-lightgrey.svg)](http://semver.org/spec/v2.0.0.html)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[![Waffle.io](https://img.shields.io/waffle/label/hugojosefson/color-hash/inbox.svg)](https://waffle.io/hugojosefson/color-hash)
+[![Waffle.io](https://img.shields.io/waffle/label/hugojosefson/color-hash/to%20do.svg)](https://waffle.io/hugojosefson/color-hash)
+[![Waffle.io](https://img.shields.io/waffle/label/hugojosefson/color-hash/in%20progress.svg)](https://waffle.io/hugojosefson/color-hash)
+
 _Based on [zenozeng/color-hash](https://github.com/zenozeng/color-hash); forked to restructure and future-proof._
 
 ## Demo
