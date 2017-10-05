@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 _New unreleased changes are listed here, and moved down to a release number when released._
 
+## [2.0.3] - 2017-10-05
+
+### Added
+
+- `keywords` in `package.json`.
+
 ## [2.0.2] - 2017-10-05
 
 ### Added

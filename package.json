@@ -3,6 +3,13 @@
   "version": "2.0.2",
   "description": "Generate color based on the given string (using HSL color space and string-hash).",
   "main": "src/index.js",
+  "keywords": [
+    "color",
+    "hash",
+    "css",
+    "string",
+    "hsl"
+  ],
   "files": [
     "src",
     "dist"
