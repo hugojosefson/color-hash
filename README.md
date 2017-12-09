@@ -1,5 +1,7 @@
 # Color Hash
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hugojosefson/color-hash.svg)](https://greenkeeper.io/)
+
 Deterministically generate color based on a given string.
 
 [![Build Status](https://travis-ci.org/hugojosefson/color-hash.svg?branch=master)](https://travis-ci.org/hugojosefson/color-hash)
